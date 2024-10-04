@@ -7,7 +7,7 @@ def umn(val1, val2):
     print("Произведение равно: ", a * b)
 def delen(val1, val2):
     print("Результат деления: ", a / b)
-
+exit = False
 while True:
     try:
         a = int(input ("Введите первое число: "))
