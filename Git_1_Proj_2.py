@@ -8,25 +8,30 @@ def umn(val1, val2):
 def delen(val1, val2):
     print("Результат деления: ", a / b)
 exit = False
-while True:
+while not exit:
     try:
         a = int(input ("Введите первое число: "))
         b = int(input ("Введите второе число: "))
         c = input("Введите знак действия ('+', '-', '/', '*'): ")
+        exit_cucle = False
         if c == "*":
             umn(a,b)
-            break
+            exit_cucle = True
         elif c=="+":
             sum(a,b)
-            break
+            exit_cucle = True
         elif c=="-":
             razn(a,b)
-            break
+            exit_cucle = True
         elif c=="/":
             delen(a,b)
-            break
+            exit_cucle = True
         else:
             print("Ошибка: ввели неправильный знак действия!")
+        if exit_cucle == True:
+            d = input("Если хотите выйти, нажмите '1': ")
+            if d == "1":
+                exit = True
     except ZeroDivisionError:
         print("Ошибка: деление на ноль!")
     except ValueError:
