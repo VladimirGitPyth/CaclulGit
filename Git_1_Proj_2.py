@@ -7,6 +7,7 @@ def umn(val1, val2):
     print("Произведение равно: ", a * b)
 def delen(val1, val2):
     print("Результат деления: ", a / b)
+    #простой бесполезный комментарий
 exit = False
 while not exit:
     try:
